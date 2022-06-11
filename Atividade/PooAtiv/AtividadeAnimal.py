@@ -30,4 +30,4 @@ class Gato(Animal):
         if Gato.subirNArvore > 5:
             return Gato.miar()
 
-mixano = teste
+mixano = azul
