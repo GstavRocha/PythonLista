@@ -1,10 +1,19 @@
-#https://www.somatematica.com.br/fundam/primos.php#:~:text=Para%20saber%20se%20um%20n%C3%BAmero,caso%20o%20n%C3%BAmero%20%C3%A9%20primo.
-primos = int(input(" escolha um numero "))
-num = 10000
-# por decomposição
-for i in range (primos,num):
-    if primos % i == 0:
-        print('não é primo')
-    elif primos % 5 == 0 or primos% 5 == 5:
-        print( 'teste')
 
+primo = int(input(" escolha um numero "))
+divisiveis = 0
+# por decomposição
+if primo >= 1 and primo <= 10000:
+    for i in range (1,primo +1):
+        if primo % i == 0:
+            print('\033[031m',end='')
+            divisiveis += 1
+        else:
+            print('\033[34m',end='')
+        print('{} '.format(i),end='') 
+    print('\n\33[m O número {} foi dividido {} vezes'.format(primo,divisiveis))
+    if divisiveis == 2:
+        print('\n\33[m O número {} é primo'.format(primo))
+    else:
+        print('\n\33[m O numero {} não é primo'.format(primo))
+else:
+    print('\033[31m Você deve informar um número entre 1 e 10000')
