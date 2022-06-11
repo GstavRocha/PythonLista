@@ -13,21 +13,25 @@ class Animal:
 
     def moverse(self):
         self._posicao +=1
-        print(self._posicao)
+        # print(self._posicao)
+    def local(self):
+        return self._posicao
 
 class Gato(Animal):
-    def __init__(self):
-      self.naArvore = true
+    def __init__(self, naArvore):
+      self.naArvore = naArvore
+      naArvore = True
     
-    def miar(self):
+    def miar():
         print ('Miauu....')
-    
-    def subirNArvore(self):
-        self.posicao += 1
-    def descerArvore(self):
-        self.posicao -= 1
-    def estarNArvore(self):
-        if Gato.subirNArvore > 5:
-            return Gato.miar()
 
-mixano = azul
+tobinho = Animal(12,'Tobinho',2);
+tobinho.moverse()
+tobinho.moverse()
+tobinho.moverse()
+tobinho.moverse()
+tobinho.moverse()
+tobinho.moverse()
+print(tobinho.local())
+
+
