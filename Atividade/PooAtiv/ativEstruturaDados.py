@@ -1,3 +1,4 @@
+from distutils.command.clean import clean
 import math
 
 #Numeros Complexos
@@ -5,13 +6,23 @@ class numerosComplex:
     def __init__ (self,a,b):
         self.a = a
         self.b = b
+class Cartesianas(numerosComplex):
+    def __init__(self,a):
+        super().__init__(self,a)
 
-    def aComplex(self):
-        numA = int(input("Digite o primeiro Numero "))
-        numB = int(input('Digite o segundo numero '))
-        self.a = complex(numA, numB)
-        print(type(self.a))
+    def complexSimples (self):
+        numA = int(input('Primeiro Numero '))
+        numB = int(input('Segundo Numero '))
+        self.a = complex(numA,numB)
         print(self.a)
 
-teste = numerosComplex(1,1)
-teste.aComplex()
+class Polares(numerosComplex):
+    def __init__(self,b):
+        super().__init__(self,b)
+    def cosen(self):
+        https://www.w3schools.com/python/ref_math_cos.asp
+
+teste = numerosAcomp(1)
+teste.complexSimples()
+
+    
