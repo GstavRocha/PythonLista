@@ -1,9 +1,17 @@
 import math
 
 #Numeros Complexos
-a = int(input("digite o numero "))
-b = int(input("digite outro numero"))
+class numerosComplex:
+    def __init__ (self,a,b):
+        self.a = a
+        self.b = b
 
-n = complex(a,b)
+    def aComplex(self):
+        numA = int(input("Digite o primeiro Numero "))
+        numB = int(input('Digite o segundo numero '))
+        self.a = complex(numA, numB)
+        print(type(self.a))
+        print(self.a)
 
-print(type(n))
+teste = numerosComplex(1,1)
+teste.aComplex()
