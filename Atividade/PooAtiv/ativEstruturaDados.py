@@ -1,3 +1,5 @@
+#https://www.w3schools.com/python/ref_math_cos.asp
+
 from distutils.command.clean import clean
 import math
 
@@ -20,9 +22,7 @@ class Polares(numerosComplex):
     def __init__(self,b):
         super().__init__(self,b)
     def cosen(self):
-        https://www.w3schools.com/python/ref_math_cos.asp
-
-teste = numerosAcomp(1)
-teste.complexSimples()
+        
+teste = Polares()
 
     
