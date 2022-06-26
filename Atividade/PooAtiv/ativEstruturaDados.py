@@ -5,7 +5,7 @@ import math
 import cmath
 
 #Numeros Complexos
-class coordCartesians:
+class CoordCartesians:
     def __init__(self):
         a = int(input(" Digite A "))
         b = int(input(" Digite B "))
@@ -14,6 +14,21 @@ class coordCartesians:
         n = complex(a,b)
         print(n)
 
-class coordPolares:
+class Polares:
     def __init__(self):
-        self.math.cos
+        self.r = int(input(" defina R "))
+        self.alfa = int(input( " defina Alfa "))
+    
+    def cos(self):
+         return math.cos(self.alfa)
+    def sin(self):
+        return math.sin(self.alfa)
+    
+    def resultado(self):
+       n = self.r * self.cos + self.r * self.sin
+       return n
+
+
+teste1 = CoordCartesians()
+teste2 = Polares()
+# Não funcionou!
