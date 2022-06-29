@@ -11,6 +11,5 @@ while l != -1:
     print(lista[l].letra, end=',')
     l = lista[l].prox
 
-class Lista:
-    def inicio(self):
+
         
