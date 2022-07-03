@@ -1,34 +1,76 @@
-class No:
-    def __init__(self,dado):
-        self.dado = dado
-        self.next = None
-    
-    def __str__(self):
-        return str(self.dado)
-    
-    def __repr__(self):
-        return str(self.dado)
+import sys
+class Node:
 
-class PilhaEncadeada:
-    def __init__(self):
-        self.head = None
-        self.tamanh = 0
-
-    def is_empty(self):
-        return self.head == None
+    data = ''
+    next = None
     
-    def push(self, novo):
-        if self.is_empty():
-            self.head = novo
+    def __init__(self, data):
+        self.data = data
+
+
+class Stack:
+    top = None
+    size = 0
+
+    def isEmpty(self):
+        return self.top == None
+    
+    def push(self,element):
+        if self.isEmpty():
+            self.top = Node(element)
         else:
-            novo.next = self.head
-            self.head = novo
-        self.tamanh += 1
+            new_node = Node(element)
+            new_node.next = self.top
+            self.top = new_node
+        self.size += 1
+    
+    def peek(self):
+        return self.top
+    
     def pop(self):
-        if self.is_empty():
+        if self.isEmpty():
             return None
-        else:
-            pop = self.head
-            self.head = self.head.next
-            self.tamanh -= 1
-            return pop
+        p = self.top
+        self.top = self.top.next
+        p.next = None
+        self.size -= 1
+
+        return p
+    
+    # def listItens(self):
+    #     top = self.Node(self)
+    #     print("Itens da Lista")
+    #     for i in range(self.size):
+    #         print(top[i])
+    #         top = top.next
+
+    def getSize(self):
+        return self.size.len();        
+
+def output(stack):
+    print("Top ", end="")
+    node = stack.pop()
+    while node != None:
+        print(node.data, " -> ", end="")
+        node=stack.pop()
+    print("End \n")
+
+def main():
+    stack = Stack()
+    stack.push("A")
+    stack.push("B")
+    stack.push("C")
+    stack.push("D")
+
+    output(stack)
+if __name__ == "__main__":
+    main()
+
+print("_________________")
+stack = Stack()
+stack.push("A")
+stack.push("B")
+stack.push("C")
+stack.push("D")
+stack.peek()
+# stack.listItens()
