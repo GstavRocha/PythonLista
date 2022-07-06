@@ -1,4 +1,4 @@
-import Node;
+from Node import *
 
 class LinkedList:
     __head = None
@@ -6,8 +6,9 @@ class LinkedList:
 
     def init(self):
         self.__head = Node("A",None)
+        
         nodeB = Node("B",None)
-        self._head.next = nodeB
+        self.__head.next = nodeB
 
         nodeC = Node("C",None)
         nodeB.next = nodeC
@@ -15,6 +16,6 @@ class LinkedList:
         self.__tail = ("D",None)
         nodeC.next = self.__tail
 
-    @ property
+    @property
     def head(self):
         return self.__head
